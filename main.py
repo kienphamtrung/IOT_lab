@@ -47,6 +47,12 @@ while True:
                     light = random.randint(100, 500)
                     print("Light... " + str(light))
                     client.publish("cambien2", light)
- 
+                    sensor_type = 2
+            elif sensor_type == 2:
+                    humid = random.randint(50, 70)
+                    print("Humidity..." + str(humid))
+
+                    client.publish("cambien3", humid)
+                    sensor_type = 0
     time.sleep(1)
     pass
