@@ -43,6 +43,10 @@ while True:
 
                     client.publish("cambien1", temp)
                     sensor_type = 1
-
+            elif sensor_type == 1:
+                    light = random.randint(100, 500)
+                    print("Light... " + str(light))
+                    client.publish("cambien2", light)
+ 
     time.sleep(1)
     pass
