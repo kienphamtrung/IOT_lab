@@ -61,7 +61,7 @@ while True:
     counter_ai = counter_ai - 1
             
     if counter_ai <=0:
-        counter_ai = 10
+        counter_ai = 5
         previous_result = ai_result
         ai_result = image_detector()
         print("AI Output: ",ai_result)
