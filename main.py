@@ -23,7 +23,17 @@ def disconnected(client):
 
 def message(client , feed_id , payload):
     print("Nhan du lieu: " + payload + " feed id: " + feed_id)
-   
+    if feed_id =="nutnhan1":  
+        if payload == "1":
+            writeData("Bật")
+        else:
+            writeData("Tắt")
+    
+    if feed_id =="nutnhan2":
+        if payload == "2":
+            writeData("Bật")
+        else:
+            writeData("Tắt")
 
 client = MQTTClient(AIO_USERNAME , AIO_KEY)
 client.on_connect = connected
